@@ -28,7 +28,7 @@ public class SpringBootMongoApplication implements CommandLineRunner
 		clienteRepository.save(new Cliente("Renato", "renato@email.com"));
 
 		// fetch all customers
-		System.out.println("Customers found with findAll():");
+		System.out.println("Clientes encontrados com findAll():");
 		System.out.println("-------------------------------");
 		for (Cliente cliente : clienteRepository.findAll()) {
 			System.out.println(cliente);
@@ -36,15 +36,17 @@ public class SpringBootMongoApplication implements CommandLineRunner
 		System.out.println();
 
 		// fetch an individual customer
-		System.out.println("Customer found with findByNome('Jenifer'):");
+		System.out.println("Clientes encontrados com findByNome('Jenifer'):");
 		System.out.println("--------------------------------");
 		System.out.println(clienteRepository.findByNome("Jenifer"));
+		System.out.println();
 
-		System.out.println("Customers found with findByEmail('renato@email.com'):");
+		System.out.println("Clientes encontrados com findByEmail('renato@email.com'):");
 		System.out.println("--------------------------------");
 		for (Cliente customer : clienteRepository.findByEmail("renato@email.com")) {
 			System.out.println(customer);
 		}
+		System.out.println();
 		
 	}
 }
